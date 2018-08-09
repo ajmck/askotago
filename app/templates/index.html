@@ -4,10 +4,19 @@
 
 <br />
 
-<form action="" method="post">
+<form method="post">
 	{{ form.hidden_tag() }}
-	{{ form.body(size=40) }}
+	{{ form.postbody(size=40) }}
 	{{ form.submit() }}
 </form>
+
+{% if returned_posts %}
+	{% for post in returned_posts %}
+		<p>{{post.body}}</p>
+		
+	{% endfor %}
+{% else %}
+	<p>No posts yet...</p>
+{% endif %}
 
 {% endblock %}
