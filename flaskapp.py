@@ -1,14 +1,8 @@
-from app import app
-import os
+from app import app, db
+from app.models import Post
 
-app = Flask(__name__)
 
-class Config(object):
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'defaultsecretkey'
-
-    if os.environ.get('FLASK_ENV') == 'development':
-        print("Development mode set in environment")
-        environment = 'development'
-        DEBUG = True
-    else:
-        print("Environment mode: " + str(os.environ.get('FLASK_MODE')))
+# to set up environment in `flask shell`
+@app.shell_context_processor
+def make_shell_context():
+    return {'db': db, 'Post': Post}
