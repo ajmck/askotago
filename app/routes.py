@@ -1,5 +1,5 @@
 from app import app, db
-from flask import render_template, redirect
+from flask import render_template, redirect, request
 from app.forms import PostForm
 from app.models import Post
 
@@ -12,7 +12,7 @@ def index():
 
     if form.validate_on_submit():
         p = Post()
-        p.body = form.postbody()
+        p.body = request.form["postbody"]
         print(p)
         db.session.add(p)
         db.session.commit()
