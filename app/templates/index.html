@@ -4,11 +4,15 @@
 
 <br />
 
-<form method="post">
-	{{ form.hidden_tag() }}
-	<input type="text" name="postbody" placeholder="Ask away..." />
-	{{ form.submit() }}
-</form>
+<div class="form-group">
+	<table><tr>
+		<form method="post">
+			{{ form.hidden_tag() }}
+			<td><input class="form-control form-control-lg" type="text" name="postbody" placeholder="Ask away..." /></td>
+			<td><button type="submit" class="btn btn-primary" >Submit</button></td>
+		</form>
+	</tr></table>
+</div>
 
 {% if returned_posts %}
 	{% for post in returned_posts %}
