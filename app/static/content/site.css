@@ -1,5 +1,4 @@
 body {
-    padding-top: 50px;
     padding-bottom: 20px;
 }
 
@@ -45,3 +44,19 @@ input[type="checkbox"].input-validation-error {
 .checkbox {
   margin-bottom: 20px;
 }
+
+
+.ask-navbar {
+    background: url(../images/bg.png) no-repeat 0 0 #FFC10E;
+    background-size: 370px;
+    position: relative;
+    height: 75px;
+}
+.ask-navbar-text {
+    text-indent: -9999px;
+    display: block;
+    height: 75px;
+    background: url(../images/text.png) no-repeat 0 20px;
+    background-size: 250px;
+}
+
