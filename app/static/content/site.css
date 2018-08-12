@@ -60,3 +60,12 @@ input[type="checkbox"].input-validation-error {
     background-size: 250px;
 }
 
+.container .content {
+    display: none;
+    padding : 5px;
+}
+
+.card-title {
+font-size: 14pt;
+font-family: Verdana, sans-serif;
+}

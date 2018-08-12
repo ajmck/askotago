@@ -1,14 +1,101 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AskOtago</title>
+    <link rel="stylesheet" type="text/css" href="static/content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="static/content/site.css" />
+    <script src="static/scripts/modernizr-2.6.2.js"></script>
 
-{% block content %}
+	</head>
 
-<br />
+<body>
+    <div class="ask-navbar">
 
+            <div class="container">
+                <a href="/" class="ask-navbar-text">AskOtago</a>
+            </div>
 
-	{% for post in questionset %}
-		<p>{{post.question}}</p>
+    </div>
+
+	<br />
+    <div class="container body-content">
+
+		<div class="tile card mb-3">
+			<div class="card-body">
+				<div class="header card-title"><span><a><h4>Who won the Battle of York?</h4></a></span></div>
+				<div class="content">
+				<p class="card-title">The Americans won a clear victory, however it did not have decisive strategic results as York was a less important objective in military terms than Kingston, where the British armed vessels on Lake Ontario were based.</p>
+				</div>
+			</div>
+		</div>
 		
-	{% endfor %}
+				<div class="tile card mb-3">
+			<div class="card-body">
+				<div class="header card-title"><span><a><h4>Who would win in a race if they were transformed into bats - the Archway building or the Burns building?</h4></a></span></div>
+				<div class="content">
+				<p class="card-title">Easy. Archway hands down. Burns is a box, Archway is far more aerodynamic and it almost already has wings. The asbestos also has the effect of slowing Burns down.</p>
+				</div>
+			</div>
+		</div>
+		
+						<div class="tile card mb-3">
+			<div class="card-body">
+				<div class="header card-title"><span><a><h4>How big should I expect my 50 bag to be?</h4></a></span></div>
+				<div class="content">
+				<p class="card-title">In Dunedin 2.5 grams isn’t that bad. A gram should be a 20 bag - it’s not normally, but in theory you want somewhere around there so at a minimum you should be paying that rate. You may get a bit of economies of scale due to the extra amount, but don’t expect it.</p>
+				</div>
+			</div>
+		</div>
+		
+						<div class="tile card mb-3">
+			<div class="card-body">
+				<div class="header card-title"><span><a><h4>What kind of grades do I need to get into Med?</h4></a></span></div>
+				<div class="content">
+				<p class="card-title">If you have to ask, you’re not getting in.</p>
+				</div>
+			</div>
+		</div>
+		
+						<div class="tile card mb-3">
+			<div class="card-body">
+				<div class="header card-title"><span><a><h4>Who is Charlene Chainz?</h4></a></span></div>
+				<div class="content">
+				<p class="card-title">Harlene Hayne’s rap persona.</p>
+				</div>
+			</div>
+		</div>
+		
+						<div class="tile card mb-3">
+			<div class="card-body">
+				<div class="header card-title"><span><a><h4>What is New Zealand’s oldest, bestest, and most technologically advanced student magazine?</h4></a></span></div>
+				<div class="content">
+				<p class="card-title">Not sure. The ODT?</p>
+				</div>
+			</div>
+		</div>
+		
 
+    </div>
 
-{% endblock %}
+    <script src="static/scripts/jquery-1.10.2.js"></script>
+    <script src="static/scripts/bootstrap.js"></script>
+    <script src="static/scripts/respond.js"></script>
+
+	  <script>
+$(".header").click(function () {
+
+    $header = $(this);
+    //getting the next element
+    $content = $header.next();
+    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+    $content.slideToggle(500, function () {
+
+    });
+
+});
+  </script>
+
+</body>
+</html>
